@@ -10,3 +10,4 @@ Onemli Basliklar ( Try it yourself yapilacak)
 — https://www.w3schools.com/css/default.asp (soldaki ‘CSS Tutorial’ basliginin altındakiler, ‘CSS Advanced’ basligina kadar)
 
 ## Assignment
+Gecen hafta layoutunu yaptiginiz websitesinin css'i yapilacak.
