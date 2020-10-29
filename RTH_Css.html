@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RefugeeTalentHub</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		/* {
+			border-style: solid;
+			border-color: red;
+		}*/
+		body {
+			font-family: monospace;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		nav {
+			background-color: rgb(28,209,158);
+			height: 160px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;			
+
+		}
+		nav a {
+			margin: 20px;
+			padding: 20px;			
+		}
+
+		.first {
+			margin-right: 130px;
+			margin-left: 70px;
+			order: 1;
+		}
+
+		.last {
+			margin-left: 250px;
+			margin-right: 70px;	
+			order: 3;	
+		}
+
+		.nav_middle {
+			order: 2;
+		}
+
+		.middle {
+			font-size: 18px;
+			letter-spacing: -1.5px;
+			text-decoration: none;
+			color: green;
+		}
+
+		.small {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 200px;
+			margin-right: 30px;
+						
+		}
+
+		.small img {
+			margin-bottom: 30px;
+		}		
+
+		.big {			
+			background-position: center;
+			background-size: cover;
+			transition: transform ease-in-out 0.6s;
+		}
+
+		.big:hover {			
+			transform: scale(1.08);
+			overflow: hidden;
+			background-size: cover;
+		} 
+
+		.main {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin: 30px;
+			margin-top: 40px;		
+		}
+
+		.textBox {
+			border-style: solid;
+			border-color: blue;
+			border-width: 1px;
+			margin: 20px;
+			margin-right: 100px;
+			margin-left: 100px;
+
+		}
+		
+		.blogs {			
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.blog1 {
+			font-size: 30px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: blue;
+			padding: 10px 30px;		
+			flex: 1
+		}
+
+		.blog1 h1 {
+			margin-right: 50px;
+		}
+
+		.blog2 {
+			font-size: 18px;
+			font-family: Arial, Helvetica, sans-serif;
+			padding: 20px 50px;
+			flex: 2
+		}
+
+		.ik {			
+			display: flex;
+			justify-content: center;
+		}
+
+		.ik a {
+			font-size: 17px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: white;
+			letter-spacing: -0.8px;
+			margin: 30px;
+			text-decoration: none;
+			background-color: rgb(36,214,167);
+			padding: 25px 50px;
+			border-radius: 50px;
+			transition-duration: 0.8s;
+
+		}
+
+		.ik a:hover {
+			color: rgb(36,214,167);
+			background-color: white;
+			border-style: solid;
+			border-color: rgb(36,214,167);
+			border-width: 1px;
+		}		
+
+		.sliderBackground {
+			background-color: rgb(247,113,119);			
+			margin-top: 50px;
+			margin-right: 100px;
+			margin-left: 100px;	
+			text-align: center;		
+		}
+
+		.sliderBackground h1 {
+			font-size: 50px;
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			padding-top: 30px;			
+		}
+
+		.sliderBackground p {
+			font-size: 16px;
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;	
+			margin-left: 18px;
+			margin-right: 18px;	
+			margin-top:-15px;	
+			margin-bottom: 500px;
+		}
+
+		.toon {
+			padding-bottom: 50px;
+		}
+		.toon a {
+			font-size: 17px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			color: white;
+			letter-spacing: -0.8px;			
+			text-decoration: none;
+			background-color: rgb(247,113,119);
+			padding: 25px 40px;
+			border-radius: 50px;
+			transition-duration: 0.8s;
+			border-style: solid;
+			border-color: white;
+			border-width: 1px;
+		}
+
+		.toon a:hover {
+			color: rgb(247,113,119);
+			background-color: white;			
+		}
+
+		.footerBox {
+			background-color: rgb(229,229,229);
+			padding-bottom: 50px;
+		}
+
+		.footer1 {			
+			display: flex;
+			flex-direction: row;
+			margin-top: 50px;
+			padding-top: 40px;
+			font-size: 18px;
+			font-family: Arial, Helvetica, sans-serif;			
+		}
+
+		.vluchtelingen {
+			display: flex;
+			flex-direction: column;
+			margin-left: 100px;
+		}
+
+		.partners {
+			display: flex;
+			flex-direction: column;
+			padding-right: 520px;
+		}
+
+		.vluchtelingen a {
+			padding-bottom: 20px;
+		}
+
+		.partners a {
+			padding-bottom: 20px;
+		}
+
+		.imgFooter {
+			padding-top: 25px;
+			height: 158px;
+			width: 298px; 
+
+		}
+
+		.footer2 {			
+			display: flex;
+			flex-direction: row;			
+			font-size: 18px;
+			font-family: Arial, Helvetica, sans-serif;
+			padding-left: 100px;			
+		}
+
+		.logo {
+			padding-top: 60px;
+			padding-left: 150px;
+			
+		}
+
+		.fa {
+			padding: 8px;
+			font-size: 25px;
+			width: 25px;		
+			text-align: center;
+			text-decoration: none;
+			margin: 20px;
+			border-radius: 50%;
+		}
+
+		.fa:hover {
+		    opacity: 0.7;
+		    background: rgb(40,40,40);
+		}
+
+		 .fa-facebook {
+		  	background: rgb(151,151,151);
+		  	color: white;
+		}
+
+		.fa-twitter {
+		  	background: rgb(151,151,151);
+		  	color: white;
+		}
+		.fa-linkedin {
+		  	background: rgb(151,151,151);
+		  	color: white;
+		}
+		.fa-instagram {
+		  	background: rgb(151,151,151);
+		  	color: white;
+		}
+
+		.last {
+			padding-top: 60px;
+			
+		}
+
+		@media only screen and (max-width: 500px) {
+  			.main {
+   				flex-direction: column;
+  			}
+  			nav {
+  				flex-direction: column;
+  			}
+  			.last {
+
+  			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a class="first" href=""><img src="refugeetalenthub.png"></a>
+		<a class="last" href=""><img  src="world.png" ></a>
+		<div class="nav_middle">
+			<a class="middle" href="">Activiteiten</a>
+			<a class="middle" href="">Verhalen</a>
+			<a class="middle" href="">Info</a>
+		</div>
+	</nav>
+	<section class="main" >
+		<div class="small" >
+			<img src="mavi1.png">
+			<a class="big" href=""><img src="financy.png"></a> 
+		</div>
+		<div class="big">
+			<a href=""><img src="buyuk1.png"></a>
+		</div>
+	</section>
+
+	<section class="textBox">
+		<div class="blogs">
+			<article class="blog1">
+				<h1>Een baan begint bij een ontmoeting</h1>
+			</article>
+			<article class="blog2">
+				<p>
+					Veel vluchtelingen in Nederland staan te popelen om aan het werk te gaan maar komen moeilijk in contact met werkgevers. Andersom geldt dat ook. Veel werkgevers willen het talent en het vakmanschap van vluchtelingen graag benutten, maar weten hen niet goed te vinden.
+				</p>
+				<p>
+					Daarom is er de Refugee Talent Hub. Wij brengen vluchtelingen en werkgevers dichter bij elkaar met betaalde banen als doel. Onze droom is een Nederland waarin werkgevers de talenten van vluchtelingen zien en benutten, en vluchtelingen dus gelijke kansen hebben op de arbeidsmarkt.
+				</p>
+				<p>
+					Wij organiseren kleinschalige bijeenkomsten voor vluchtelingen, op de werkvloer bij werkgevers. Daarbij staat de persoonlijke ontmoeting centraal.
+				</p>
+			</article>
+		</div>
+		<div class="ik">
+			<a style="padding: 25px 75px;" href="">IK ZOEK WERK</a>
+			<a href="">IK BEN WERKGEVER</a>
+		</div>
+	</section>
+	<section class="sliderBackground">
+		<div>
+			<h1>Activiteiten</h1>
+			<p>De Refugee Talent Hub brengt vluchtelingen en werkgevers dichter bij elkaar met betaalde banen als doel. Wil jij je kans op een baan vergroten? Meld je aan voor een van deze activiteiten.</p>
+		</div>
+		<div class="toon">
+			<a href="">TOON ALLE ACTIVITEITEN</a>
+		</div>
+	</section>	
+	<footer class="footerBox">
+		<div class="footer1">
+			<ul class="vluchtelingen">
+			<h3>Vluchtelingen</h3>
+			<a href="">Informatie</a>
+			<a href="">Contact</a>
+		</ul>
+		<ul class="partners">
+			<h3>Partners</h3>
+			<a href="">Informatie</a> 
+			<a href="">Contact</a>
+		</ul>
+		<img class="imgFooter" src="footer.png">
+		</div>
+		<div class="footer2">
+			<ul class="algemeen">
+				<h3>Algemeen</h3>
+				<a href="">Privacyverklaring</a>			
+			</ul>
+			<div class="logo">
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-instagram"></a>			
+				<a href="#" class="fa fa-linkedin"></a>				
+			</div>
+			<div class="last"><p>© 2020 Refugee Talent Hub</p></div>
+		</div>		
+	</footer>
+</body>
+</html>
+
+
+<!--HOVER/ZOOM 
+	https://www.youtube.com/watch?v=svbUTy-ECss 
+		.out {
+			width: 600px;
+			height: 330px;
+			overflow: hidden;
+		}
+
+		.in {
+			width: 100%;
+			height: 100%;
+			background-image: url("mavi1.png");
+			background-position: center;
+			background-size: cover;
+		}
+
+		.in:hover {
+			transform: scale(1.2);
+		}
+		
